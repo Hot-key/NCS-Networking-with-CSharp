@@ -62,6 +62,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Function\ByteFunction.cs" />
+    <Compile Include="Ncs\NcsBuffer.cs" />
+    <Compile Include="Ncs\NcsInit.cs" />
+    <Compile Include="Ncs\NcsMain.cs" />
+    <Compile Include="Ncs\NcsReceiveFilter.cs" />
+    <Compile Include="Ncs\NcsRequestInfo.cs" />
+    <Compile Include="Ncs\NcsServer.cs" />
+    <Compile Include="Ncs\NcsUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
