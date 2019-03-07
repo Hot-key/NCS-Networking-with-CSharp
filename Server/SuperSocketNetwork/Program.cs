@@ -19,7 +19,6 @@ namespace SuperSocketNetwork
         // Send Type
         public const int SendToClient = 1;
         public const int SendToServer = 2;
-        public const int SendToAll = 3;
         public const int MySpace = -1;
         public const int AllSpace = -2;
 

@@ -31,7 +31,7 @@ namespace SuperSocketNetwork.Ncs
             ncsServer.NewRequestReceived += new RequestHandler<NcsUser, NcsRequestInfo>(NcsServer_NewRequestReceived);
         }
 
-        void UserInput(NcsUser user, int space)
+        void UserSpace(NcsUser user, int space)
         {
             lock (user_list)
             {
@@ -67,11 +67,11 @@ namespace SuperSocketNetwork.Ncs
             int space_type = buffer.pop_sint16();
             int signal = buffer.pop_sint16();
 
-            if ((requestInfo.Key == 2) || (requestInfo.Key == 3))
+            // Send To Server
+            if (requestInfo.Key == Program.SendToServer)
             {
                 switch (signal)
                 {
-                    // HeartBeat
                     case Program.signal_heartbeat_first:
                         {
                             NcsBuffer heartbeat_buffer = new NcsBuffer(Program.signal_heartbeat_second, Program.SendToClient, Program.MySpace);
@@ -85,7 +85,7 @@ namespace SuperSocketNetwork.Ncs
                         {
                             Console.WriteLine("Login : " + buffer.pop_string());
                             user.authentication = true;
-                            UserInput(user, 0);
+                            UserSpace(user, 0);
 
                         }
                         break;
@@ -96,55 +96,11 @@ namespace SuperSocketNetwork.Ncs
                         }
                         break;
                 }
-
-                // Send To All
-                if ((requestInfo.Key == 3) && (user.authentication == true))
-                {
-                    // Client < - > Client
-                    switch (space_type)
-                    {
-                        case Program.MySpace:
-                            {
-                                foreach (NcsUser index in user_list[user.space])
-                                {
-                                    if (index != user)
-                                        index.Send(requestInfo.Buffer, 0, requestInfo.Buffer.Length);
-                                }
-                            }
-                            break;
-
-                        case Program.AllSpace:
-                            {
-                                for (int i = 0; i < Program.space_max; i++)
-                                {
-                                    foreach (NcsUser index in user_list[i])
-                                    {
-                                        if (index != user)
-                                            index.Send(requestInfo.Buffer, 0, requestInfo.Buffer.Length);
-                                    }
-                                }
-                            }
-                            break;
-
-                        default:
-                            {
-                                foreach (NcsUser index in user_list[space_type])
-                                {
-                                    if (index != user)
-                                        index.Send(requestInfo.Buffer, 0, requestInfo.Buffer.Length);
-                                }
-                            }
-                            break;
-                    }
-
-                }
             }
-            else
-
 
             // Send To Client
+            else if (requestInfo.Key == Program.SendToClient)
             {
-                // Client < - > Client
                 if (user.authentication == true)
                 {
                     switch (space_type)

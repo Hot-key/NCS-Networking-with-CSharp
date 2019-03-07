@@ -1,6 +1,6 @@
 ///SuperSocket_createBuffer(Type, SendTo, Space);
 
-if(argument1 == SuperSocket.SendToClient)or(argument1 == SuperSocket.SendToAll) {
+if(argument1 == SuperSocket.SendToClient){
     global.buffer_mode = true;
 }
 

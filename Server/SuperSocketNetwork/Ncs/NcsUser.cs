@@ -47,7 +47,7 @@ namespace SuperSocketNetwork.Ncs
                 buffer.push_size();
                 Send(buffer.write_buffer, 0, buffer.write_offset);
 
-                await Task.Delay(2000);
+                await Task.Delay(3000);
 
                 if ((heartbeat == false) && (heartbeat_count >= 3) || (instance_die == true))
                 {

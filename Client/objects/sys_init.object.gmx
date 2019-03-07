@@ -29,7 +29,6 @@
 enum SuperSocket {
     SendToClient = 1,
     SendToServer = 2,
-    SendToAll = 3,
     
     MySpace = -1,
     AllSpace = -2,
