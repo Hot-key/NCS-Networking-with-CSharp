@@ -81,6 +81,10 @@ switch(signal) {
     case SuperSocket.signal_login:
         show_message(SuperSocket_read(processing_buffer, buffer_u8));
         break;
+        
+    case 4:
+        show_message(SuperSocket_read(processing_buffer, buffer_string));
+        break;
 }
 </string>
           </argument>
@@ -134,7 +138,7 @@ draw_set_valign(fa_top);
           <argument>
             <kind>1</kind>
             <string>/// Sample Send Packet
-buffer = SuperSocket_createBuffer(SuperSocket.signal_login, SuperSocket.SendToServer);
+buffer = SuperSocket_createBuffer(4, SuperSocket.SendToClient);
 SuperSocket_write(buffer, buffer_string, "hello world2");
 SuperSocket_write(buffer, buffer_s16, 32);
 SuperSocket_send(buffer);

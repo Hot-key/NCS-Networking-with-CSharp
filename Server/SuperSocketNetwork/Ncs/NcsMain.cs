@@ -48,7 +48,7 @@ namespace SuperSocketNetwork.Ncs
         {
             NcsBuffer buffer = new NcsBuffer(requestInfo.Body);
             int signal = buffer.pop_sint16();
-            Console.WriteLine(signal);
+
             if ((requestInfo.Key == 2) || (requestInfo.Key == 3))
             {
                 switch (signal)
