@@ -10,7 +10,7 @@ namespace SuperSocketNetwork.Ncs
 {
     public class NcsReceiveFilter : FixedHeaderReceiveFilter<NcsRequestInfo>
     {
-        public NcsReceiveFilter() : base(6)
+        public NcsReceiveFilter() : base(6) // header size = 6
         {
 
         }

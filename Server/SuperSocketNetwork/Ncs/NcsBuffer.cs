@@ -19,12 +19,16 @@ namespace SuperSocketNetwork.Ncs
             this.read_buffer = buffer;
         }
 
-        public NcsBuffer(int signal, int SendTo)
+        public NcsBuffer(int signal, int SendTo, int space_type)
         {
-            byte[] temp_buffer2 = BitConverter.GetBytes((Int16)SendTo);
-            temp_buffer2.CopyTo(write_buffer, write_offset);
+            byte[] temp_buffer3 = BitConverter.GetBytes((Int16)SendTo);
+            temp_buffer3.CopyTo(write_buffer, write_offset);
             write_offset += sizeof(Int16);
 
+            byte[] temp_buffer2 = BitConverter.GetBytes((Int16)space_type);
+            temp_buffer2.CopyTo(write_buffer, write_offset);
+            write_offset += sizeof(Int16);
+            
             byte[] temp_buffer = BitConverter.GetBytes((Int16)signal);
             temp_buffer.CopyTo(write_buffer, write_offset);
             write_offset += sizeof(Int16);

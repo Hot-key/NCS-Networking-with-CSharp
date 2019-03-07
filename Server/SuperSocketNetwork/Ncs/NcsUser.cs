@@ -13,7 +13,8 @@ namespace SuperSocketNetwork.Ncs
         private short heartbeat_count = 0;
         public bool instance_die = false;
         public string Pid = String.Empty;
-        
+        public int space = -1; // -1 is Null
+        public bool authentication = false;
 
         ///  Override Functions
         protected override void OnSessionStarted()
@@ -42,7 +43,7 @@ namespace SuperSocketNetwork.Ncs
                 else
                     heartbeat_count++;
 
-                NcsBuffer buffer = new NcsBuffer(Program.signal_heartbeat_first, Program.SendToClient);
+                NcsBuffer buffer = new NcsBuffer(Program.signal_heartbeat_first, Program.SendToClient, Program.MySpace);
                 buffer.push_size();
                 Send(buffer.write_buffer, 0, buffer.write_offset);
 

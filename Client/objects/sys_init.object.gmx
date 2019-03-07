@@ -30,6 +30,10 @@ enum SuperSocket {
     SendToClient = 1,
     SendToServer = 2,
     SendToAll = 3,
+    
+    MySpace = -1,
+    AllSpace = -2,
+    
     signal_heartbeat_first = 1,
     signal_heartbeat_second = 2,
     signal_login = 3
