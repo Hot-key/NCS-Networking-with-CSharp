@@ -27,6 +27,11 @@ namespace SuperSocketNetwork
         public const int signal_heartbeat_second = 2;
         public const int signal_login = 3;
 
+        // Send Type
+        public const int SendToClient = 1;
+        public const int SendToServer = 2;
+        public const int SendToAll = 3;
+
         static void Main(string[] args)
         {
             while (true)

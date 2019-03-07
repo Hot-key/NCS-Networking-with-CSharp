@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>/// ENUM
 enum SuperSocket {
+    SendToClient = 1,
+    SendToServer = 2,
+    SendToAll = 3,
     signal_heartbeat_first = 1,
     signal_heartbeat_second = 2,
     signal_login = 3
@@ -54,6 +57,7 @@ enum SuperSocket {
             <string>/// Variable
 global.ip = '127.0.0.1';
 global.port = 65535;
+global.buffer_mode = false;
 global.login = false;
 </string>
           </argument>

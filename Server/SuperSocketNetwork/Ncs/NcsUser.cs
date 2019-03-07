@@ -42,7 +42,7 @@ namespace SuperSocketNetwork.Ncs
                 else
                     heartbeat_count++;
 
-                NcsBuffer buffer = new NcsBuffer(Program.signal_heartbeat_first);
+                NcsBuffer buffer = new NcsBuffer(Program.signal_heartbeat_first, Program.SendToClient);
                 buffer.push_size();
                 Send(buffer.write_buffer, 0, buffer.write_offset);
 

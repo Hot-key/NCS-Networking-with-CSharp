@@ -23,6 +23,7 @@
       <script>scripts\only_single.gml</script>
     </scripts>
   </scripts>
+  <shaders name="shaders"/>
   <fonts name="fonts">
     <font>fonts\fnt_text</font>
   </fonts>

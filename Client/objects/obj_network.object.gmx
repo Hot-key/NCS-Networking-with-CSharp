@@ -134,7 +134,7 @@ draw_set_valign(fa_top);
           <argument>
             <kind>1</kind>
             <string>/// Sample Send Packet
-buffer = SuperSocket_createBuffer(1);
+buffer = SuperSocket_createBuffer(SuperSocket.signal_login, SuperSocket.SendToServer);
 SuperSocket_write(buffer, buffer_string, "hello world2");
 SuperSocket_write(buffer, buffer_s16, 32);
 SuperSocket_send(buffer);

@@ -47,21 +47,48 @@ namespace SuperSocketNetwork.Ncs
         void NcsServer_NewRequestReceived(NcsUser user, NcsRequestInfo requestInfo)
         {
             NcsBuffer buffer = new NcsBuffer(requestInfo.Body);
-            switch (requestInfo.Key)
+            int signal = buffer.pop_sint16();
+            Console.WriteLine(signal);
+            if ((requestInfo.Key == 2) || (requestInfo.Key == 3))
             {
-                // HeartBeat
-                case Program.signal_heartbeat_first:
-                    {
-                        NcsBuffer heartbeat_buffer = new NcsBuffer(Program.signal_heartbeat_second);
-                        heartbeat_buffer.push_size();
-                        user.Send(heartbeat_buffer.write_buffer, 0, heartbeat_buffer.write_offset);
-                        user.heartbeat = true;
-                    }
-                    break;
+                switch (signal)
+                {
+                    // HeartBeat
+                    case Program.signal_heartbeat_first:
+                        {
+                            NcsBuffer heartbeat_buffer = new NcsBuffer(Program.signal_heartbeat_second, Program.SendToClient);
+                            heartbeat_buffer.push_size();
+                            user.Send(heartbeat_buffer.write_buffer, 0, heartbeat_buffer.write_offset);
+                            user.heartbeat = true;
+                        }
+                        break;
 
-                default:
-                    Console.WriteLine("unvaild : " + requestInfo.Key);
-                    break;
+                    case Program.signal_login:
+                        {
+                            Console.WriteLine(buffer.pop_string());
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("unvaild : " + signal);
+                        break;
+                }
+
+                if (requestInfo.Key == 3)
+                {
+                    // Client < - > Client
+                    foreach (NcsUser index in user_list)
+                    {
+                        index.Send(requestInfo.Buffer, 0, requestInfo.Buffer.Length);
+                    }
+                }
+            }
+            else
+            {
+                // Client < - > Client
+                foreach(NcsUser index in user_list)
+                {
+                    index.Send(requestInfo.Buffer, 0, requestInfo.Buffer.Length);
+                }
             }
         }
 

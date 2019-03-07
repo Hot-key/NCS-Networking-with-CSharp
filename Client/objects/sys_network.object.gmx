@@ -120,12 +120,14 @@ if (ds_map_find_value(async_load, 'id') == socket) {
             with(obj_network) {
                 processing_buffer = ds_queue_dequeue(global.message_processing);
                 if not(buffer_get_size(processing_buffer) == 1){
+                    var sendTo = buffer_read(processing_buffer, buffer_u16);
                     signal = buffer_read(processing_buffer, buffer_s16);
+                    
                     // 서버 관련 처리
                     var check = true;
                     switch(signal) {
                         case SuperSocket.signal_heartbeat_first:
-                            var buffer = SuperSocket_createBuffer(1);
+                            var buffer = SuperSocket_createBuffer(1, SuperSocket.SendToServer);
                             SuperSocket_send(buffer);
                             ping[0] = current_time;
                             check = false;
