@@ -9,51 +9,51 @@ using SuperSocket.SocketBase.Config;
 
 namespace Ncs.Server
 {
-    public class NcsMain
+    public class NcsMain<T> where T : AppSession<T, NcsRequestInfo>, new()
     {
-        NcsServer ncsServer = new NcsServer();
+        NcsServer<T> ncsServer = new NcsServer<T>();
 
-        public static NcsOption Option;
+
         public NcsMain(ServerConfig config)
         {
             NcsScan.StartScan();
-            Option = new NcsOption();
+            NcsDefine.Option = new NcsOption();
             ncsServer.Setup(new RootConfig(), config);
             ncsServer.Start();
 
-            ncsServer.NewSessionConnected += new SessionHandler<NcsUser>(NcsServer_NewUserConnected);
-            ncsServer.SessionClosed += new SessionHandler<NcsUser, CloseReason>(NcsServer_UserClosed);
-            ncsServer.NewRequestReceived += new RequestHandler<NcsUser, NcsRequestInfo>(NcsServer_NewRequestReceived);
+            ncsServer.NewSessionConnected += new SessionHandler<T>(NcsServer_NewUserConnected);
+            ncsServer.SessionClosed += new SessionHandler<T, CloseReason>(NcsServer_UserClosed);
+            ncsServer.NewRequestReceived += new RequestHandler<T, NcsRequestInfo>(NcsServer_NewRequestReceived);
         }
 
         public NcsMain(ServerConfig config, NcsOption option)
         {
             NcsScan.StartScan();
-            Option = option;
+            NcsDefine.Option = option;
             ncsServer.Setup(new RootConfig(), config);
             ncsServer.Start();
 
-            ncsServer.NewSessionConnected += new SessionHandler<NcsUser>(NcsServer_NewUserConnected);
-            ncsServer.SessionClosed += new SessionHandler<NcsUser, CloseReason>(NcsServer_UserClosed);
-            ncsServer.NewRequestReceived += new RequestHandler<NcsUser, NcsRequestInfo>(NcsServer_NewRequestReceived);
+            ncsServer.NewSessionConnected += new SessionHandler<T>(NcsServer_NewUserConnected);
+            ncsServer.SessionClosed += new SessionHandler<T, CloseReason>(NcsServer_UserClosed);
+            ncsServer.NewRequestReceived += new RequestHandler<T, NcsRequestInfo>(NcsServer_NewRequestReceived);
         }
 
-        void NcsServer_NewUserConnected(NcsUser user)
+        void NcsServer_NewUserConnected(T user)
         {
-            NcsModule.NewSessionConnected.Invoke(user);
+            NcsModule<T>.NewSessionConnected.Invoke(user);
         }
 
-        void NcsServer_UserClosed(NcsUser user, CloseReason reason)
+        void NcsServer_UserClosed(T user, CloseReason reason)
         {
-            NcsModule.SessionClosed.Invoke(user, reason);
+            NcsModule<T>.SessionClosed.Invoke(user, reason);
         }
 
-        void NcsServer_NewRequestReceived(NcsUser user, NcsRequestInfo requestInfo)
+        void NcsServer_NewRequestReceived(T user, NcsRequestInfo requestInfo)
         {
-            NcsModule.NewRequestReceived.Invoke(user, requestInfo);
-            if (Packet.BufferDictionary.ContainsKey(requestInfo.Key))
+            NcsModule<T>.NewRequestReceived.Invoke(user, requestInfo);
+            if (Packet<T>.BufferDictionary.ContainsKey(requestInfo.Key))
             {
-                var action = Packet.BufferDictionary[requestInfo.Key] as Action<NcsUser, NcsRequestInfo>;
+                var action = Packet<T>.BufferDictionary[requestInfo.Key] as Action<T, NcsRequestInfo>;
                 action(user, requestInfo);
             }
         }

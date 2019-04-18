@@ -6,13 +6,12 @@ using SuperSocket.SocketBase;
 
 namespace Ncs
 {
-    public class NcsModule : IHideObjectMembers
+    public class NcsModule<T> : IHideObjectMembers where T: AppSession<T, NcsRequestInfo>, new()
     {
-        public Packet packet = new Packet();
+        public Packet<T> packet = new Packet<T>();
 
-        public static Action<NcsUser> NewSessionConnected = _ => { };
-        public static Action<NcsUser, CloseReason> SessionClosed =(_,__)=> { };
-        public static Action<NcsUser, NcsRequestInfo> NewRequestReceived = (_, __) => { };
-        public static Action<Exception> HandleException = _ => { };
+        public static Action<T> NewSessionConnected = _ => { };
+        public static Action<T, CloseReason> SessionClosed =(_,__)=> { };
+        public static Action<T, NcsRequestInfo> NewRequestReceived = (_, __) => { };
     }
 }

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using CGD;
 using Ncs.Routing;
 using Ncs.Server;
+using SuperSocket.SocketBase;
 
 namespace Ncs
 {
-    public class Packet
+    public class Packet<T> where T : AppSession<T, NcsRequestInfo>, new()
     {
-        public Action<NcsUser, NcsRequestInfo> this[dynamic i]
+        public Action<T, NcsRequestInfo> this[dynamic i]
         {
             set
             {
@@ -17,9 +18,9 @@ namespace Ncs
             }
         }
 
-        internal static Dictionary<dynamic, Action<NcsUser, NcsRequestInfo>> BufferDictionary = new Dictionary<dynamic, Action<NcsUser, NcsRequestInfo>>();
+        internal static Dictionary<dynamic, Action<T, NcsRequestInfo>> BufferDictionary = new Dictionary<dynamic, Action<T, NcsRequestInfo>>();
 
-        public void Add(dynamic type, Action<NcsUser, NcsRequestInfo> action)
+        public void Add(dynamic type, Action<T, NcsRequestInfo> action)
         {
             BufferDictionary.Add(type, action);
         }
