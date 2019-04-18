@@ -1,16 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using SuperSocket.SocketBase;
-using SuperSocket.SocketBase.Command;
 using SuperSocket.SocketBase.Config;
 using SuperSocket.SocketBase.Protocol;
 
-namespace SuperSocketNetwork.Ncs
+namespace Ncs.Server
 {
     public class NcsServer : AppServer<NcsUser, NcsRequestInfo>
     {
-        public NcsServer()
-            : base(new DefaultReceiveFilterFactory<NcsReceiveFilter, NcsRequestInfo>())
+        public NcsServer() : base(new DefaultReceiveFilterFactory<NcsReceiveFilter, NcsRequestInfo>())
         {
 
         }
