@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using CGD;
+using Ncs.NcsPool;
 using Ncs.Routing;
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Config;
@@ -12,7 +14,6 @@ namespace Ncs.Server
     public class NcsMain<T> where T : AppSession<T, NcsRequestInfo>, new()
     {
         NcsServer<T> ncsServer = new NcsServer<T>();
-
 
         public NcsMain(ServerConfig config)
         {
@@ -53,9 +54,9 @@ namespace Ncs.Server
             NcsModule<T>.NewRequestReceived.Invoke(user, requestInfo);
             if (Packet<T>.BufferDictionary.ContainsKey(requestInfo.Key))
             {
-                var action = Packet<T>.BufferDictionary[requestInfo.Key] as Action<T, NcsRequestInfo>;
-                action(user, requestInfo);
+                Parallel.Invoke(Packet<T>.BufferDictionary[requestInfo.Key](user, requestInfo));
             }
+            Pool.RequestInfoPool.PutObject(requestInfo);
         }
 
     }

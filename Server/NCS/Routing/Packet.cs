@@ -13,7 +13,9 @@ namespace Ncs
         {
             set
             {
+                #if DEBUG
                 Console.WriteLine(i);
+                #endif
                 this.Add(i, value);
             }
         }

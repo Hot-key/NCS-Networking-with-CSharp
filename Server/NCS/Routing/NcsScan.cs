@@ -16,7 +16,7 @@ namespace Ncs.Routing
                 {
                     if (type.BaseType != null)
                     {
-                        if (type.BaseType.Name == "NcsModule")
+                        if (type.BaseType.Name.Contains("NcsModule"))
                         {
                             dynamic instance = Activator.CreateInstance(type);
                         }

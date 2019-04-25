@@ -1,5 +1,6 @@
 ﻿using System;
 using Ncs.Function;
+using Ncs.NcsPool;
 using SuperSocket.Common;
 using SuperSocket.Facility.Protocol;
 
@@ -20,7 +21,7 @@ namespace Ncs.Server
         protected override NcsRequestInfo ResolveRequestInfo(ArraySegment<byte> header, byte[] bodyBuffer, int offset, int length)
         {
             var byteTmp = bodyBuffer.CloneRange(offset, length);
-            return new NcsRequestInfo(byteTmp, ByteFunction.Combine(header.Array, byteTmp));
+            return NcsPool.Pool.RequestInfoPool.GetObject().SetBuffer(byteTmp, ByteFunction.Combine(header.Array, byteTmp));
         }
     }
 }

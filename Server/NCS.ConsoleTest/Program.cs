@@ -22,7 +22,7 @@ namespace Ncs.ConsoleTest
             {
                 Port = 65535,
                 Ip = "Any",
-                MaxConnectionNumber = 5000,
+                MaxConnectionNumber = 3000,
                 Mode = SocketMode.Tcp,
                 Name = "NcsMain",
             });
@@ -34,7 +34,7 @@ namespace Ncs.ConsoleTest
         }
     }
 
-    public class NewUser : AppSession<NewUser, NcsRequestInfo>
+    public class NewUser : NcsUser<NewUser>
     {
         public bool heartbeat = false;
     }
@@ -43,46 +43,51 @@ namespace Ncs.ConsoleTest
     {
         public Test()
         {
-            packet[(ushort)1] = (user, info) =>
+            //packet[(ushort)1] = (user, info) =>
+            //{
+            //    user.heartbeat = true;
+            //    user.Send(NcsTemplateBuffer.HeartbeatBuffer2);
+            //};
+
+            packet[(ushort)2] = (user, info) =>
             {
-                user.heartbeat = true;
-                user.Send(NcsTemplateBuffer.HeartbeatBuffer2);
+                user.Send(info.Buffer);
             };
 
-            NewSessionConnected = user =>
-            {
-                Console.WriteLine("NewSessionConnected");
-                new Task(async () =>
-                {
-                    int heartbeat_count = 0;
-                    while (true)
-                    {
-                        if (heartbeat_count >= 10)
-                        {
-                            user.heartbeat = false;
-                        }
-                        else
-                        {
-                            heartbeat_count++;
-                        }
-                        user.Send(NcsTemplateBuffer.HeartbeatBuffer1);
-                        await Task.Delay(1000);
-                        if ((user.heartbeat == false) && (heartbeat_count >= 10))
-                        {
-                            user.Close();
-                        }
-                        else
-                        {
-                            continue;
-                        }
-                        if (heartbeat_count >= 10)
-                        {
-                            heartbeat_count = 0;
-                        }
-                    }
+            //NewSessionConnected = user =>
+            //{
+            //    Console.WriteLine("NewSessionConnected");
+            //    new Task(async () =>
+            //    {
+            //        int heartbeat_count = 0;
+            //        while (true)
+            //        {
+            //            if (heartbeat_count >= 10)
+            //            {
+            //                user.heartbeat = false;
+            //            }
+            //            else
+            //            {
+            //                heartbeat_count++;
+            //            }
+            //            user.Send(NcsTemplateBuffer.HeartbeatBuffer1);
+            //            await Task.Delay(1000);
+            //            if ((user.heartbeat == false) && (heartbeat_count >= 10))
+            //            {
+            //                user.Close();
+            //            }
+            //            else
+            //            {
+            //                continue;
+            //            }
+            //            if (heartbeat_count >= 10)
+            //            {
+            //                heartbeat_count = 0;
+            //            }
+            //        }
                   
-                }).Start();
-            };
+            //    }).Start();
+            //};
         }
     }
 }

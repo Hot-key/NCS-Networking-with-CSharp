@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CGDbuffer%28for CSharp%29">
@@ -64,10 +66,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Define.cs" />
+    <Compile Include="NcsPool\NcsObjectPool.cs" />
     <Compile Include="Function\ByteFunction.cs" />
     <Compile Include="NcsLock.cs" />
     <Compile Include="NcsModule.cs" />
     <Compile Include="IHideObjectMembers.cs" />
+    <Compile Include="NcsPool\Pool.cs" />
     <Compile Include="Routing\Packet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\NcsScan.cs" />
@@ -86,5 +91,6 @@
     <None Include="supersocket.cmd" />
     <None Include="supersocket.sh" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
