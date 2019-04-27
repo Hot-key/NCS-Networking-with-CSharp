@@ -9,7 +9,7 @@ namespace Ncs.NcsPool
 {
     internal static class Pool
     {
-        public static NcsObjectPool<NcsRequestInfo> RequestInfoPool= new NcsObjectPool<NcsRequestInfo>(()=> new NcsRequestInfo());
+        public static NcsObjectPool<NcsRequestInfo> RequestInfoPool = new NcsObjectPool<NcsRequestInfo>(() => new NcsRequestInfo());
 
         private static NcsObjectPool<CGD.buffer> BufferPool16 = new NcsObjectPool<CGD.buffer>(() => new CGD.buffer(16));
         private static NcsObjectPool<CGD.buffer> BufferPool32 = new NcsObjectPool<CGD.buffer>(() => new CGD.buffer(32));
@@ -22,6 +22,10 @@ namespace Ncs.NcsPool
         private static NcsObjectPool<CGD.buffer> BufferPool4096 = new NcsObjectPool<CGD.buffer>(() => new CGD.buffer(4096));
         private static NcsObjectPool<CGD.buffer> BufferPool8192 = new NcsObjectPool<CGD.buffer>(() => new CGD.buffer(8192));
 
-        public static NcsObjectPool<CGD.buffer> BufferPool = new NcsObjectPool<CGD.buffer>(() => new CGD.buffer(8192));
+        public static CGD.buffer BufferPool
+        {
+            get;
+
+        }
     }
 }

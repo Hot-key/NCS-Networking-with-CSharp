@@ -25,6 +25,7 @@ namespace Ncs.ConsoleTest
                 MaxConnectionNumber = 3000,
                 Mode = SocketMode.Tcp,
                 Name = "NcsMain",
+                
             });
 
             while (Console.ReadLine() != "q")

@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Client",
-    "\\Server"
+    "\\Server",
+    "\\Server\\NCS.ConsoleTest"
   ],
-  "SelectedNode": "\\Client\\GameMakerStudio",
+  "SelectedNode": "\\Server\\NCS.ConsoleTest\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
