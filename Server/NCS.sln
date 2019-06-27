@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.156
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ncs.Core", "NCS.Core\Ncs.Core.csproj", "{5F854B18-0580-43A1-9F98-F8AB93D65F10}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ncs", "NCS\Ncs.csproj", "{BDF17534-C585-4A4C-96B6-13579EB58C8A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ncs.ConsoleTest", "NCS.ConsoleTest\Ncs.ConsoleTest.csproj", "{F384D91D-5368-4922-8A95-A33125757564}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5F854B18-0580-43A1-9F98-F8AB93D65F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F854B18-0580-43A1-9F98-F8AB93D65F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F854B18-0580-43A1-9F98-F8AB93D65F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F854B18-0580-43A1-9F98-F8AB93D65F10}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BDF17534-C585-4A4C-96B6-13579EB58C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BDF17534-C585-4A4C-96B6-13579EB58C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDF17534-C585-4A4C-96B6-13579EB58C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
