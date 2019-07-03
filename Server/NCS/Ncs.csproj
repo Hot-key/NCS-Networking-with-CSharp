@@ -67,12 +67,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Define.cs" />
-    <Compile Include="NcsPool\NcsObjectPool.cs" />
+    <Compile Include="Pool\NcsArrayPool.cs" />
+    <Compile Include="Pool\NcsObjectPool.cs" />
     <Compile Include="Function\ByteFunction.cs" />
     <Compile Include="NcsLock.cs" />
     <Compile Include="NcsModule.cs" />
     <Compile Include="IHideObjectMembers.cs" />
-    <Compile Include="NcsPool\Pool.cs" />
+    <Compile Include="Pool\NcsPool.cs" />
     <Compile Include="Routing\Packet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\NcsScan.cs" />

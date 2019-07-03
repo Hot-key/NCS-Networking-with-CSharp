@@ -26,5 +26,9 @@ namespace Ncs.Server
         {
             this.Send(buffer.buf, 0, buffer.len);
         }
+        public async Task SendAsync(CGD.buffer buffer)
+        {
+            await new TaskFactory().StartNew(() => this.Send(buffer.buf, 0, buffer.len));
+        }
     }
 }

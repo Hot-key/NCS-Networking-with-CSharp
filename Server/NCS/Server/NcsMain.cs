@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CGD;
-using Ncs.NcsPool;
 using Ncs.Routing;
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Config;
@@ -54,9 +53,11 @@ namespace Ncs.Server
             NcsModule<T>.NewRequestReceived(user, requestInfo);
             if (Packet<T>.BufferDictionary.ContainsKey(requestInfo.Key))
             {
-                Parallel.Invoke(Packet<T>.BufferDictionary[requestInfo.Key](user, requestInfo));
+                Packet<T>.BufferDictionary[requestInfo.Key](user, requestInfo);
             }
-            Pool.RequestInfoPool.PutObject(requestInfo);
+
+            requestInfo.Clear();
+            NcsRequestInfo.RequestInfoPool.PutObject(requestInfo);
         }
 
     }

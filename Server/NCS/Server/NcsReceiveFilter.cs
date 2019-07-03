@@ -1,13 +1,13 @@
 ﻿using System;
 using Ncs.Function;
-using Ncs.NcsPool;
+using Ncs.Pool;
 using SuperSocket.Common;
 using SuperSocket.Facility.Protocol;
 
 namespace Ncs.Server
 {
     public class NcsReceiveFilter : FixedHeaderReceiveFilter<NcsRequestInfo>
-    {
+    { 
         public NcsReceiveFilter() : base(NcsDefine.Option.HeaderSize)
         {
 
@@ -21,7 +21,7 @@ namespace Ncs.Server
         protected override NcsRequestInfo ResolveRequestInfo(ArraySegment<byte> header, byte[] bodyBuffer, int offset, int length)
         {
             var byteTmp = bodyBuffer.CloneRange(offset, length);
-            return NcsPool.Pool.RequestInfoPool.GetObject().SetBuffer(byteTmp, ByteFunction.Combine(header.Array, byteTmp));
+            return NcsRequestInfo.RequestInfoPool.GetObject().SetBuffer(byteTmp, ByteFunction.Combine(header.Array, byteTmp));
         }
     }
 }

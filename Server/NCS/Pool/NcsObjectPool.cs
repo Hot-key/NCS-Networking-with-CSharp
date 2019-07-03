@@ -1,22 +1,25 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Ncs.NcsPool
+namespace Ncs.Pool
 {
-    internal class NcsObjectPool<T>
+    public class NcsObjectPool<T>
     {
         private ConcurrentBag<T> _objects;
-        private Func<T> _objectGenerator;
+        protected Func<T> _objectGenerator;
 
         public NcsObjectPool(Func<T> objectGenerator)
         {
-            if (objectGenerator == null) throw new ArgumentNullException("objectGenerator");
             _objects = new ConcurrentBag<T>();
-            _objectGenerator = objectGenerator;
+
+            if (objectGenerator != null)
+            {
+                _objectGenerator = objectGenerator;
+            }
+            else
+            {
+                _objectGenerator = (Activator.CreateInstance<T>);
+            }
         }
 
         public T GetObject()
