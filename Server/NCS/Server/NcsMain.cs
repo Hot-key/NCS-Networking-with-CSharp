@@ -50,6 +50,7 @@ namespace Ncs.Server
 
         void NcsServer_NewRequestReceived(T user, NcsRequestInfo requestInfo)
         {
+
             NcsModule<T>.NewRequestReceived(user, requestInfo);
             if (Packet<T>.BufferDictionary.ContainsKey(requestInfo.Key))
             {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using SuperSocket.SocketBase;
+using SuperSocket.SocketBase.Protocol;
 
 namespace Ncs.Server
 {
@@ -29,6 +30,14 @@ namespace Ncs.Server
         public async Task SendAsync(CGD.buffer buffer)
         {
             await new TaskFactory().StartNew(() => this.Send(buffer.buf, 0, buffer.len));
+        }
+    }
+
+    public class NetworkSession : AppSession<NetworkSession, BinaryRequestInfo>
+    {
+        public void Send(CGD.buffer buffer)
+        {
+            this.Send(buffer.buf, 0, buffer.len);
         }
     }
 }

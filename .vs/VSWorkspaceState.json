@@ -1,10 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Client",
-    "\\Server",
-    "\\Server\\NCS.ConsoleTest"
+    ""
   ],
-  "SelectedNode": "\\Server\\NCS.sln",
   "PreviewInSolutionExplorer": false
 }

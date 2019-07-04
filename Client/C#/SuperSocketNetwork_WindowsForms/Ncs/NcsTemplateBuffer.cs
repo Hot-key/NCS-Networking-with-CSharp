@@ -1,6 +1,6 @@
 ﻿using CGD;
 
-namespace SuperSocketNetwork_Console
+namespace SuperSocketNetwork_WindowsForms.Ncs
 {
     public static class NcsTemplateBuffer
     {

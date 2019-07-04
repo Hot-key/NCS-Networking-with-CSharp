@@ -11,24 +11,28 @@ namespace Ncs.Server
 
         public new CGD.buffer Body { get; private set; }
 
-        public CGD.buffer Buffer { get; private set; }
 
         public NcsRequestInfo(byte[] body, byte[] buffer)
         {
             Key = NcsDefine.Option.TypeFunc(new CGD.buffer(buffer, 0, buffer.Length));
             Body = new CGD.buffer(body, 0, body.Length);
-            Buffer = new CGD.buffer(buffer, 0, buffer.Length);
         }
 
         public NcsRequestInfo()
         {
         }
 
-        public NcsRequestInfo SetBuffer(byte[] body, byte[] buffer)
+        public NcsRequestInfo SetBuffer(byte[] body)
         {
-            Key = NcsDefine.Option.TypeFunc(new CGD.buffer(buffer, 0, buffer.Length));
+            Key = NcsDefine.Option.TypeFunc(new CGD.buffer(body, 0, body.Length));
             Body = new CGD.buffer(body, 0, body.Length);
-            Buffer = new CGD.buffer(buffer, 0, buffer.Length);
+
+            return this;
+        }
+        public NcsRequestInfo SetBuffer(byte[] body,int length)
+        {
+            Key = NcsDefine.Option.TypeFunc(new CGD.buffer(body, 0, length));
+            Body = new CGD.buffer(body, 0, length);
 
             return this;
         }
@@ -37,7 +41,6 @@ namespace Ncs.Server
         {
             Key = null;
             NcsPool.ReturnBuffer(Body.clear());
-            NcsPool.ReturnBuffer(Buffer.clear());
         }
     }
 }

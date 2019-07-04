@@ -21,7 +21,14 @@ namespace Ncs.ConsoleTest
             {
                 Port = 65535,
                 Ip = "Any",
-                MaxConnectionNumber = 3000,
+
+                MaxConnectionNumber = 1000,
+                SendBufferSize = 32768,
+                ReceiveBufferSize = 4096,
+                MaxRequestLength = 1048576,
+                SyncSend = true,
+                SendingQueueSize = 64,
+
                 Mode = SocketMode.Tcp,
                 Name = "NcsMain",
             });
@@ -44,13 +51,14 @@ namespace Ncs.ConsoleTest
         {
             packet[(ushort)1] = async (user, info) =>
             {
-                user.heartbeat = true;
-                await user.SendAsync(NcsTemplateBuffer.HeartbeatBuffer2);
+                user.Send(info.Body);
+                //user.heartbeat = true;
+                //await user.SendAsync(NcsTemplateBuffer.HeartbeatBuffer2);
             };
 
             packet[(ushort)2] = (user, info) =>
             {
-                user.Send(info.Buffer);
+                user.Send(info.Body);
             };
 
             NewSessionConnected = user =>

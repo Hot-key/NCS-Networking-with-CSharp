@@ -21,7 +21,7 @@ namespace Ncs.Server
         protected override NcsRequestInfo ResolveRequestInfo(ArraySegment<byte> header, byte[] bodyBuffer, int offset, int length)
         {
             var byteTmp = bodyBuffer.CloneRange(offset, length);
-            return NcsRequestInfo.RequestInfoPool.GetObject().SetBuffer(byteTmp, ByteFunction.Combine(header.Array, byteTmp));
+            return NcsRequestInfo.RequestInfoPool.GetObject().SetBuffer(ByteFunction.Combine(header.Array, byteTmp), length + NcsDefine.Option.HeaderSize);
         }
     }
 }
