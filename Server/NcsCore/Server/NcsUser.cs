@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Protocol;
 
-namespace Ncs.Server
+namespace NcsCore.Server
 {
     public class NcsUser<T> : AppSession<T, NcsRequestInfo> where T : AppSession<T, NcsRequestInfo>, new()
     {
@@ -26,10 +26,6 @@ namespace Ncs.Server
         public void Send(CGD.NcsBuffer buffer)
         {
             this.Send(buffer.buf, 0, buffer.len);
-        }
-        public async Task SendAsync(CGD.NcsBuffer buffer)
-        {
-            await new TaskFactory().StartNew(() => this.Send(buffer.buf, 0, buffer.len));
         }
     }
 

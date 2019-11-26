@@ -1,8 +1,9 @@
 ﻿using System;
-using Ncs.Server;
+using NcsCore;
+using NcsCore.Server;
 using SuperSocket.SocketBase;
 
-namespace Ncs
+namespace NcsCore
 {
     public class NcsModule<T> : IHideObjectMembers where T: AppSession<T, NcsRequestInfo>, new()
     {

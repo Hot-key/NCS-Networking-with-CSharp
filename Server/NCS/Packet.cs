@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using CGD;
-using Ncs.Routing;
 using Ncs.Server;
+using Ncs.Routing;
 using SuperSocket.SocketBase;
 
-namespace Ncs
+namespace NcsCore
 {
     public class Packet<T> where T : AppSession<T, NcsRequestInfo>, new()
     {
@@ -13,6 +13,9 @@ namespace Ncs
         {
             set
             {
+                #if DEBUG
+                Console.WriteLine(i);
+                #endif
                 this.Add(i, value);
             }
         }

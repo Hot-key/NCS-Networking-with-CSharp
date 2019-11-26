@@ -1,14 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <Version>0.1.0</Version>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <RepositoryUrl>https://github.com/Hot-key/NCS-Networking-with-CSharp</RepositoryUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <CodeAnalysisRuleSet />
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <CodeAnalysisRuleSet />
   </PropertyGroup>
@@ -19,14 +19,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="SuperSocket.Common" Version="0.1">
+    <ProjectReference Include="..\NcsCore\NcsCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SuperSocket.Common">
       <HintPath>..\DLL\SuperSocket.Common.dll</HintPath>
     </Reference>
-    <Reference Include="SuperSocket.SocketBase" Version="0.1">
+    <Reference Include="SuperSocket.SocketBase">
       <HintPath>..\DLL\SuperSocket.SocketBase.dll</HintPath>
     </Reference>
-    <Reference Include="SuperSocket.SocketEngine" Version="0.1">
+    <Reference Include="SuperSocket.SocketEngine">
       <HintPath>..\DLL\SuperSocket.SocketEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="CGDbuffer%28for CSharp%29">
+      <HintPath>..\DLL\CGDbuffer(for CSharp).dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

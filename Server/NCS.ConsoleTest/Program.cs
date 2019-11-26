@@ -26,7 +26,7 @@ namespace Ncs.ConsoleTest
                 SendBufferSize = 32768,
                 ReceiveBufferSize = 4096,
                 MaxRequestLength = 1048576,
-                SyncSend = true,
+                SyncSend = true,    
                 SendingQueueSize = 64,
 
                 Mode = SocketMode.Tcp,
@@ -49,7 +49,7 @@ namespace Ncs.ConsoleTest
     {
         public Test()
         {
-            packet[(ushort)1] = async (user, info) =>
+            packet[(ushort)1] = (user, info) =>
             {
                 user.Send(info.Body);
                 //user.heartbeat = true;

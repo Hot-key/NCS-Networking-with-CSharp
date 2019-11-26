@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ncs.Server
+namespace NcsCore.Server
 {
     public class NcsOption
     {
@@ -17,6 +17,9 @@ namespace Ncs.Server
 
             ReceiveFunc = (byte[] header, int offset, int length) =>
             {
+                // Todo : BitConverter 이용 - 성능확인
+                //return BitConverter.ToInt32(header, offset);
+
                 return (int)header[offset] +
                        (int)header[offset + 1] * 256 +
                        (int)header[offset + 2] * 65535 +
@@ -38,6 +41,9 @@ namespace Ncs.Server
 
             ReceiveFunc = (byte[] header, int offset, int length) =>
             {
+                // Todo : BitConverter 이용 - 성능확인
+                //return BitConverter.ToInt32(header, offset);
+
                 return (int)header[offset] +
                        (int)header[offset + 1] * 256 +
                        (int)header[offset + 2] * 65535 +
@@ -55,6 +61,7 @@ namespace Ncs.Server
         /// 기본적으로 TypeFunc는 2의 길이 ReceiveFunc는 4의 길이를 가지고 있습니다</param>
         public NcsOption(Func<byte[], int, int, dynamic> receiveFunc, int headerSize)
         {
+            // Todo : BitConverter 이용 - 성능확인
             TypeFunc = buffer => buffer.get_front_ushort(4);
 
             ReceiveFunc = receiveFunc;

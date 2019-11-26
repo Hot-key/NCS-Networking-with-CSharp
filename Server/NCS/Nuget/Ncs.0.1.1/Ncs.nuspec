@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/Hot-key/NCS-Networking-with-CSharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Hot-key/NCS-Networking-with-CSharp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Easy and quick to use socket</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Socket SuperSocket Server</tags>
+  </metadata>
+</package>

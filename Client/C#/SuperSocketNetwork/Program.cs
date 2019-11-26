@@ -24,13 +24,13 @@ namespace SuperSocketNetwork_Console
             Console.CursorVisible = false;
             NcsTemplateBuffer.SetTempBuffer();
             
-            tcpSession = new AsyncTcpSession(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 65535));
+            tcpSession = new AsyncTcpSession();
 
             tcpSession.Connected += tcpSession_Connected;
             tcpSession.Closed += tcpSession_Closed;
             tcpSession.DataReceived += tcpSession_DataReceived;
             tcpSession.Error += new EventHandler<ErrorEventArgs>(tcpSession_Error);
-            tcpSession.Connect();
+            tcpSession.Connect(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 65535));
 
             while (Console.ReadLine() != "q")
             {
@@ -49,9 +49,9 @@ namespace SuperSocketNetwork_Console
 
             byte[] tmpBuffer = e.Data;
             var buffer = new CGD.buffer(e.Data, 0, e.Length);
-
-            ushort bufferLength = buffer.extract_ushort();
-            ushort bufferType = buffer.extract_byte();
+            
+            int bufferLength = buffer.extract_int();
+            ushort bufferType = buffer.extract_ushort();
 
             length += bufferLength;
             count++;
@@ -76,7 +76,14 @@ namespace SuperSocketNetwork_Console
                     pingStopwatch.Reset();
                     break;
             }
-            
+
+            Console.SetCursorPosition(0, 10);
+            Console.WriteLine("tcpSession_DataReceived");
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine("Type   : " + bufferType);
+            Console.WriteLine("Length : " + bufferLength);
+            Console.WriteLine("---------------------------------");
+
         }
 
         private static void tcpSession_Closed(object sender, EventArgs e)
@@ -85,7 +92,6 @@ namespace SuperSocketNetwork_Console
 
         private static void tcpSession_Connected(object sender, EventArgs e)
         {
-            Console.WriteLine("tcpSession_Connected");
         }
     }
 }

@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CGD;
-using Ncs.Routing;
-using Ncs;
+using NcsCore.Routing;
+using NcsCore;
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Config;
 
-namespace Ncs.Server
+namespace NcsCore.Server
 {
     public class NcsMain<T> where T : AppSession<T, NcsRequestInfo>, new()
     {
-        public int port;
-
         NcsServer<T> ncsServer = new NcsServer<T>();
 
         public NcsMain(ServerConfig config)
@@ -27,8 +25,6 @@ namespace Ncs.Server
             ncsServer.NewSessionConnected += new SessionHandler<T>(NcsServer_NewUserConnected);
             ncsServer.SessionClosed += new SessionHandler<T, CloseReason>(NcsServer_UserClosed);
             ncsServer.NewRequestReceived += new RequestHandler<T, NcsRequestInfo>(NcsServer_NewRequestReceived);
-
-            port = config.Port;
         }
 
         public NcsMain(ServerConfig config, NcsOption option)
@@ -41,8 +37,6 @@ namespace Ncs.Server
             ncsServer.NewSessionConnected += new SessionHandler<T>(NcsServer_NewUserConnected);
             ncsServer.SessionClosed += new SessionHandler<T, CloseReason>(NcsServer_UserClosed);
             ncsServer.NewRequestReceived += new RequestHandler<T, NcsRequestInfo>(NcsServer_NewRequestReceived);
-
-            port = config.Port;
         }
 
         void NcsServer_NewUserConnected(T user)

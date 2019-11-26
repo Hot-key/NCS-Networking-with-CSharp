@@ -1,7 +1,7 @@
-﻿using Ncs.Pool;
+﻿using NcsCore.Pool;
 using SuperSocket.SocketBase.Protocol;
 
-namespace Ncs.Server
+namespace NcsCore.Server
 {
     public class NcsRequestInfo : RequestInfo<NcsRequestInfo>
     {
