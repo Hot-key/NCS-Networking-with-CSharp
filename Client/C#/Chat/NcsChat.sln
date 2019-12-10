@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NcsChatcCient", "NcsChatcCient\NcsChatcCient.csproj", "{9C69AD82-2FA7-4445-960D-62A60BFE75E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NcsChatServer", "NcsChatServer\NcsChatServer.csproj", "{12C06696-BCF1-42DF-A4CE-3AA216DFB2AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C69AD82-2FA7-4445-960D-62A60BFE75E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C69AD82-2FA7-4445-960D-62A60BFE75E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C69AD82-2FA7-4445-960D-62A60BFE75E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C69AD82-2FA7-4445-960D-62A60BFE75E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12C06696-BCF1-42DF-A4CE-3AA216DFB2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C06696-BCF1-42DF-A4CE-3AA216DFB2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C06696-BCF1-42DF-A4CE-3AA216DFB2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C06696-BCF1-42DF-A4CE-3AA216DFB2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CDDC6AC8-1B8E-49BA-9A04-AF12D0BB038B}
+	EndGlobalSection
+EndGlobal

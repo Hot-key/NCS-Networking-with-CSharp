@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\LG\\source\\repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\LG\\source\\repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\LG\\source\\repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj",
+        "projectName": "NcsChatServer",
+        "projectPath": "C:\\Users\\LG\\source\\repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj",
+        "packagesPath": "C:\\Users\\LG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LG\\source\\repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\LG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "NLog": {
+              "target": "Package",
+              "version": "[4.6.8, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
