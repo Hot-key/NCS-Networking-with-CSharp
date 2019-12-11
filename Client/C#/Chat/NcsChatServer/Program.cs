@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using NcsChatServer.ConsoleHelper;
 using NcsCore.Server;
 using SuperSocket.SocketBase.Config;
@@ -10,11 +11,12 @@ namespace NcsChatServer
         public static Draw ConsoleSystem;
         static void Main(string[] args)
         {
-            ConsoleSystem = new ConsoleHelper.Draw(60, 16);
+            ConsoleSystem = new ConsoleHelper.Draw(71, 20, "NcsChatServer");
 
             ConsoleSystem.InitConsole();
             ConsoleSystem.SetRoomCount(0);
             ConsoleSystem.SetUserCount(0);
+            ConsoleSystem.SetPortNum(65535);
 
             var server = new NcsMain<ChatUser>(new ServerConfig()
             {
@@ -24,9 +26,18 @@ namespace NcsChatServer
                 MaxRequestLength = 128,
             });
 
-            while (Console.ReadLine() != "q")
+            new Task((async () =>
             {
+                while (ConsoleSystem.IsDraw)
+                {
+                    ConsoleSystem.OnDraw();
+                    await Task.Delay(200);
+                }
+            })).Start();
 
+            while (ConsoleSystem.IsDraw)
+            {
+                ConsoleSystem.SendCmd(Console.ReadLine());
             }
         }
     }

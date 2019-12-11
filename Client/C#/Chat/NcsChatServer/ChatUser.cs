@@ -6,5 +6,6 @@ namespace NcsChatServer
     {
         public int roomNum;
         public string name;
+        public string id;
     }
 }

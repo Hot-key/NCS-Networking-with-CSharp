@@ -1,8 +1,0 @@
-C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatcCient\bin\Debug\NcsChatcCient.exe.config
-C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatcCient\bin\Debug\NcsChatcCient.exe
-C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatcCient\bin\Debug\NcsChatcCient.pdb
-C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatcCient\obj\Debug\NcsChatcCient.csprojAssemblyReference.cache
-C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatcCient\obj\Debug\NcsChatcCient.Properties.Resources.resources
-C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatcCient\obj\Debug\NcsChatcCient.csproj.GenerateResource.cache
-C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatcCient\obj\Debug\NcsChatcCient.exe
-C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatcCient\obj\Debug\NcsChatcCient.pdb

@@ -8,7 +8,8 @@ namespace NcsChatServer
         {
             NewSessionConnected = pUser =>
             {
-
+                Program.ConsoleSystem.WriteLog("[Server] NewSessionConnected!");
+                Program.ConsoleSystem.AddUserCount(1);
             };
         }
     }
