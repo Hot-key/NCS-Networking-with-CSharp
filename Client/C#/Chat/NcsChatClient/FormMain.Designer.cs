@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.buttonRoomJoin = new System.Windows.Forms.Button();
-            this.listBoxUserList = new System.Windows.Forms.ListBox();
+            this.listBoxRoomList = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonConnectServer = new System.Windows.Forms.Button();
             this.textBoxIpAddress = new System.Windows.Forms.TextBox();
@@ -48,26 +48,28 @@
             this.buttonNameChange = new System.Windows.Forms.Button();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.timerRefreshRoom = new System.Windows.Forms.Timer(this.components);
+            this.buttonReLoadRoomList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonRoomJoin
             // 
-            this.buttonRoomJoin.Location = new System.Drawing.Point(312, 131);
+            this.buttonRoomJoin.Location = new System.Drawing.Point(391, 131);
             this.buttonRoomJoin.Name = "buttonRoomJoin";
-            this.buttonRoomJoin.Size = new System.Drawing.Size(266, 23);
+            this.buttonRoomJoin.Size = new System.Drawing.Size(187, 23);
             this.buttonRoomJoin.TabIndex = 13;
             this.buttonRoomJoin.Text = "접속";
             this.buttonRoomJoin.UseVisualStyleBackColor = true;
+            this.buttonRoomJoin.Click += new System.EventHandler(this.buttonRoomJoin_Click);
             // 
-            // listBoxUserList
+            // listBoxRoomList
             // 
-            this.listBoxUserList.FormattingEnabled = true;
-            this.listBoxUserList.IntegralHeight = false;
-            this.listBoxUserList.ItemHeight = 12;
-            this.listBoxUserList.Location = new System.Drawing.Point(312, 8);
-            this.listBoxUserList.Name = "listBoxUserList";
-            this.listBoxUserList.Size = new System.Drawing.Size(266, 119);
-            this.listBoxUserList.TabIndex = 12;
+            this.listBoxRoomList.FormattingEnabled = true;
+            this.listBoxRoomList.IntegralHeight = false;
+            this.listBoxRoomList.ItemHeight = 12;
+            this.listBoxRoomList.Location = new System.Drawing.Point(312, 8);
+            this.listBoxRoomList.Name = "listBoxRoomList";
+            this.listBoxRoomList.Size = new System.Drawing.Size(266, 119);
+            this.listBoxRoomList.TabIndex = 12;
             // 
             // label1
             // 
@@ -107,6 +109,7 @@
             // 
             this.textBoxRoomName.Location = new System.Drawing.Point(12, 105);
             this.textBoxRoomName.Name = "textBoxRoomName";
+            this.textBoxRoomName.ShortcutsEnabled = false;
             this.textBoxRoomName.Size = new System.Drawing.Size(206, 21);
             this.textBoxRoomName.TabIndex = 8;
             // 
@@ -118,6 +121,7 @@
             this.buttonCreateRoom.TabIndex = 9;
             this.buttonCreateRoom.Text = "방 만들기";
             this.buttonCreateRoom.UseVisualStyleBackColor = true;
+            this.buttonCreateRoom.Click += new System.EventHandler(this.buttonCreateRoom_Click);
             // 
             // label2
             // 
@@ -138,15 +142,16 @@
             // 
             this.textBoxPw.Location = new System.Drawing.Point(69, 70);
             this.textBoxPw.Name = "textBoxPw";
+            this.textBoxPw.PasswordChar = '●';
             this.textBoxPw.Size = new System.Drawing.Size(149, 21);
-            this.textBoxPw.TabIndex = 6;
+            this.textBoxPw.TabIndex = 5;
             // 
             // buttonRegister
             // 
             this.buttonRegister.Location = new System.Drawing.Point(224, 42);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(75, 23);
-            this.buttonRegister.TabIndex = 5;
+            this.buttonRegister.TabIndex = 6;
             this.buttonRegister.Text = "회원가입";
             this.buttonRegister.UseVisualStyleBackColor = true;
             this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
@@ -195,6 +200,7 @@
             this.buttonNameChange.TabIndex = 11;
             this.buttonNameChange.Text = "이름변경";
             this.buttonNameChange.UseVisualStyleBackColor = true;
+            this.buttonNameChange.Click += new System.EventHandler(this.buttonNameChange_Click);
             // 
             // textBoxName
             // 
@@ -208,11 +214,22 @@
             this.timerRefreshRoom.Interval = 5000;
             this.timerRefreshRoom.Tick += new System.EventHandler(this.timerRefreshRoom_Tick);
             // 
-            // Form1
+            // buttonReLoadRoomList
+            // 
+            this.buttonReLoadRoomList.Location = new System.Drawing.Point(312, 131);
+            this.buttonReLoadRoomList.Name = "buttonReLoadRoomList";
+            this.buttonReLoadRoomList.Size = new System.Drawing.Size(73, 23);
+            this.buttonReLoadRoomList.TabIndex = 17;
+            this.buttonReLoadRoomList.Text = "새로고침";
+            this.buttonReLoadRoomList.UseVisualStyleBackColor = true;
+            this.buttonReLoadRoomList.Click += new System.EventHandler(this.buttonReLoadRoomList_Click);
+            // 
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 160);
+            this.Controls.Add(this.buttonReLoadRoomList);
             this.Controls.Add(this.buttonNameChange);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.buttonLogin);
@@ -230,8 +247,8 @@
             this.Controls.Add(this.buttonConnectServer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRoomJoin);
-            this.Controls.Add(this.listBoxUserList);
-            this.Name = "Form1";
+            this.Controls.Add(this.listBoxRoomList);
+            this.Name = "FormMain";
             this.Text = "FormMain";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
@@ -242,7 +259,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonRoomJoin;
-        private System.Windows.Forms.ListBox listBoxUserList;
+        private System.Windows.Forms.ListBox listBoxRoomList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonConnectServer;
         private System.Windows.Forms.TextBox textBoxIpAddress;
@@ -260,6 +277,7 @@
         private System.Windows.Forms.Button buttonNameChange;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Timer timerRefreshRoom;
+        private System.Windows.Forms.Button buttonReLoadRoomList;
     }
 }
 

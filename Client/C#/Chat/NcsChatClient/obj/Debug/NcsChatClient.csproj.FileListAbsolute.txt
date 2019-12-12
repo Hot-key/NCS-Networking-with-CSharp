@@ -22,4 +22,5 @@ C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsCh
 C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatClient\obj\Debug\NcsChatClient.csproj.CopyComplete
 C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatClient\obj\Debug\NcsChatClient.exe
 C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatClient\obj\Debug\NcsChatClient.pdb
-C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatClient\obj\Debug\NcsChatClient.Form1.resources
+C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatClient\obj\Debug\NcsChatClient.FormMain.resources
+C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatClient\obj\Debug\NcsChatClient.FormChat.resources

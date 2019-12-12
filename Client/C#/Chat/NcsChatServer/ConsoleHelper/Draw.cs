@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
+using NLog.Fluent;
 
 namespace NcsChatServer.ConsoleHelper
 {
@@ -37,7 +38,7 @@ namespace NcsChatServer.ConsoleHelper
         {
             
             Console.WriteLine($"┌{("  " + Console.Title + " ").PadRight((size.Width + Console.Title.Length + 6) / 2 - 4, '─').PadLeft(size.Width - 4, '─')}┐");
-            Console.WriteLine($"{"│   User Count :        Room Count :        Port : ".PadRight(size.Width - 3)}│");
+            Console.WriteLine($"{"│   UserData Count :        Room Count :        Port : ".PadRight(size.Width - 3)}│");
             Console.WriteLine($"├{"".PadLeft(size.Width - 4, '─')}┤");
 
             for (int i = 0; i < size.Height - 6; i++)
@@ -48,7 +49,7 @@ namespace NcsChatServer.ConsoleHelper
             Console.WriteLine($"├{"".PadLeft(size.Width - 4, '─')}┤");
             Console.WriteLine($"│{"".PadLeft(size.Width - 4)}│");
             Console.Write    ($"└{"".PadLeft(size.Width - 4, '─')}┘");
-            WriteLog("[Console] LogSystem SetUp");
+            WriteLog("[Console] Console LogSystem SetUp");
 
             IsDraw = true;
 
@@ -84,6 +85,7 @@ namespace NcsChatServer.ConsoleHelper
         public void SetPortNum(int num)
         {
             writeQueue.Enqueue(new WriteData(51, 1, num.ToString().PadLeft(3, '0')));
+            portNum = num;
         }
 
         public void WriteLog(string data)
@@ -110,6 +112,8 @@ namespace NcsChatServer.ConsoleHelper
                 Console.MoveBufferArea(2,4, size.Width - 5, size.Height - 7, 2, 3);
                 Console.SetCursorPosition(2, size.Height - 4);
                 Console.Write(data.Substring(0, Math.Min(data.Length, size.Width - 5)));
+
+                Program.Logger.Info("Console : " + data);
             }
 
             Console.SetCursorPosition(Math.Min(prevPoint.X, size.Width - 4), size.Height - 2);

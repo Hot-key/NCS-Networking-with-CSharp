@@ -7,7 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NcsChatClient", "NcsChatCli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NcsChatServer", "NcsChatServer\NcsChatServer.csproj", "{12C06696-BCF1-42DF-A4CE-3AA216DFB2AE}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NcsChatProtocol", "NcsChatProtocol\NcsChatProtocol.shproj", "{3F44AEF6-0502-4DF1-8C72-8D0ED4FC870E}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		NcsChatProtocol\NcsChatProtocol.projitems*{3f44aef6-0502-4df1-8c72-8d0ed4fc870e}*SharedItemsImports = 13
+		NcsChatProtocol\NcsChatProtocol.projitems*{9c69ad82-2fa7-4445-960d-62a60bfe75e9}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

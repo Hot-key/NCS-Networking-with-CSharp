@@ -31,3 +31,4 @@ C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsCh
 C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatServer\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatServer\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatServer\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\LG\source\repos\Hot-key\NCS-Networking-with-CSharp\Client\C#\Chat\NcsChatServer\bin\Debug\netcoreapp3.0\LiteDB.dll

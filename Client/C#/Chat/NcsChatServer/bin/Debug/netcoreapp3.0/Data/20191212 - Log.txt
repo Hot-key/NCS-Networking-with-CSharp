@@ -1,0 +1,188 @@
+[2019-12-12 11:48:56.2472][Debug] Listener (0.0.0.0:65535) was started  
+[2019-12-12 11:48:56.3245][Info] The server instance NcsServer`1-49131481 has been started!  
+[2019-12-12 11:48:56.7884][Info] Console : [Console] Console LogSystem SetUp  
+[2019-12-12 11:48:57.1010][Info] Console : [DataBase] Init Database - ./Data/user.db  
+[2019-12-12 11:48:59.1883][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 11:49:09.3914][Info] Console : [Recv] UserRegister - admin  
+[2019-12-12 11:49:09.6118][Info] Console : [Send] admin - ReqUserRegister0  
+[2019-12-12 11:49:11.2525][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 11:49:11.4758][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 11:49:17.9917][Info] Console : [Server] SessionClosed!  
+[2019-12-12 11:49:23.2875][Debug] Listener (0.0.0.0:65535) was started  
+[2019-12-12 11:49:23.3295][Info] The server instance NcsServer`1-49131481 has been started!  
+[2019-12-12 11:49:23.3502][Info] Console : [Console] Console LogSystem SetUp  
+[2019-12-12 11:49:23.5765][Info] Console : [DataBase] Init Database - ./Data/user.db  
+[2019-12-12 11:49:44.1743][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 11:49:50.9846][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 11:49:51.2069][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 11:49:55.4871][Info] Console : [Recv] UserRegister - admin  
+[2019-12-12 11:49:55.7045][Info] Console : [Send] admin - ReqUserRegister1  
+[2019-12-12 12:21:26.6518][Info] Console : [Server] SessionClosed!  
+[2019-12-12 12:52:29.4576][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 12:52:35.1671][Info] Console : [Recv] UserRegister - admin  
+[2019-12-12 12:52:35.3846][Info] Console : [Send] admin - ReqUserRegister1  
+[2019-12-12 12:52:41.8900][Info] Console : [Recv] UserRegister - admin  
+[2019-12-12 12:52:42.1018][Info] Console : [Send] admin - ReqUserRegister1  
+[2019-12-12 12:54:13.2054][Info] Console : [Server] SessionClosed!  
+[2019-12-12 12:54:42.2818][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 12:54:46.9884][Info] Console : [Recv] UserRegister - admin  
+[2019-12-12 12:54:47.2143][Info] Console : [Send] admin - ReqUserRegister1  
+[2019-12-12 12:56:12.8212][Info] Console : [Server] SessionClosed!  
+[2019-12-12 13:00:44.4062][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 13:00:52.9478][Info] Console : [Recv] UserRegister - admin  
+[2019-12-12 13:00:53.1703][Info] Console : [Send] admin - ReqUserRegister1  
+[2019-12-12 13:02:01.7227][Info] Console : [Recv] UserRegister - admin2  
+[2019-12-12 13:02:01.9538][Info] Console : [Send] admin2 - ReqUserRegister0  
+[2019-12-12 13:02:22.8917][Info] Console : [Recv] UserLogin - admin2  
+[2019-12-12 13:02:23.1231][Info] Console : [Send] admin2 - ReqUserLogin0  
+[2019-12-12 13:02:27.0078][Info] Console : [Server] SessionClosed!  
+[2019-12-12 13:09:43.8706][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 13:09:48.1727][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 13:09:48.3951][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 13:10:04.0674][Info] Console : [Server] SessionClosed!  
+[2019-12-12 13:10:13.3316][Debug] Listener (0.0.0.0:65535) was started  
+[2019-12-12 13:10:13.3765][Info] The server instance NcsServer`1-49131481 has been started!  
+[2019-12-12 13:10:13.3993][Info] Console : [Console] Console LogSystem SetUp  
+[2019-12-12 13:10:13.6246][Info] Console : [DataBase] Init Database - ./Data/user.db  
+[2019-12-12 13:10:19.0650][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 13:10:24.6209][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 13:10:24.8380][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 13:12:03.8833][Info] Console : [Server] SessionClosed!  
+[2019-12-12 15:28:51.1977][Debug] Listener (0.0.0.0:65535) was started  
+[2019-12-12 15:28:51.2498][Info] The server instance NcsServer`1-20226985 has been started!  
+[2019-12-12 15:28:51.2848][Info] Console : [Console] Console LogSystem SetUp  
+[2019-12-12 15:28:51.5000][Info] Console : [DataBase] Init Database - ./Data/user.db  
+[2019-12-12 15:28:52.5466][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 15:28:58.0519][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 15:28:58.2757][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 15:29:22.8773][Info] Console : [Server] SessionClosed!  
+[2019-12-12 15:29:27.5412][Error] msg:Listener (0.0.0.0:65535) error: 각 소켓 주소(프로토콜/네트워크 주소/포트)는 하나만 사용할 수 있습니다., exception:System.Net.Sockets.SocketException (10048): 각 소켓 주소(프로토콜/네트워크 주소/포트)는 하나만 사용할 수 있습니다.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at SuperSocket.SocketEngine.TcpAsyncSocketListener.Start(IServerConfig config)  
+[2019-12-12 15:29:27.5998][Debug] Listener (0.0.0.0:65535) failed to start  
+[2019-12-12 15:29:27.7270][Info] Console : [Console] Console LogSystem SetUp  
+[2019-12-12 15:29:27.9536][Info] Console : [DataBase] Init Database - ./Data/user.db  
+[2019-12-12 15:29:40.6672][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 15:29:45.1513][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 15:29:45.3793][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 15:29:56.5933][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 15:29:56.8081][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 15:30:13.8828][Info] Console : [Server] SessionClosed!  
+[2019-12-12 15:54:18.4781][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 15:54:20.3742][Info] Console : [Server] SessionClosed!  
+[2019-12-12 17:07:41.4233][Debug] Listener (0.0.0.0:65535) was started  
+[2019-12-12 17:07:41.4811][Info] The server instance NcsServer`1-20226985 has been started!  
+[2019-12-12 17:07:41.5599][Info] Console : [Console] Console LogSystem SetUp  
+[2019-12-12 17:07:41.7817][Info] Console : [DataBase] Init Database - ./Data/user.db  
+[2019-12-12 17:07:42.0027][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 17:08:50.3373][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 17:08:50.5587][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 17:15:50.9312][Debug] Listener (0.0.0.0:65535) was started  
+[2019-12-12 17:15:50.9966][Info] The server instance NcsServer`1-20226985 has been started!  
+[2019-12-12 17:15:51.0720][Info] Console : [Console] Console LogSystem SetUp  
+[2019-12-12 17:15:51.2860][Info] Console : [DataBase] Init Database - ./Data/user.db  
+[2019-12-12 17:15:59.0608][Debug] Listener (0.0.0.0:65535) was started  
+[2019-12-12 17:15:59.1055][Info] The server instance NcsServer`1-20226985 has been started!  
+[2019-12-12 17:15:59.1267][Info] Console : [Console] Console LogSystem SetUp  
+[2019-12-12 17:15:59.3466][Info] Console : [DataBase] Init Database - ./Data/user.db  
+[2019-12-12 17:16:03.0593][Error] msg:Listener (0.0.0.0:65535) error: 각 소켓 주소(프로토콜/네트워크 주소/포트)는 하나만 사용할 수 있습니다., exception:System.Net.Sockets.SocketException (10048): 각 소켓 주소(프로토콜/네트워크 주소/포트)는 하나만 사용할 수 있습니다.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at SuperSocket.SocketEngine.TcpAsyncSocketListener.Start(IServerConfig config)  
+[2019-12-12 17:16:03.1190][Debug] Listener (0.0.0.0:65535) failed to start  
+[2019-12-12 17:16:03.2927][Info] Console : [Console] Console LogSystem SetUp  
+[2019-12-12 17:16:03.5162][Info] Console : [DataBase] Init Database - ./Data/user.db  
+[2019-12-12 17:16:14.2142][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 17:16:21.9834][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 17:16:22.2105][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 17:16:37.7227][Info] Console : [Server] SessionClosed!  
+[2019-12-12 17:17:25.3317][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 17:17:32.4553][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 17:17:32.6827][Info] Console : [Send] admin - ReqUserLogin2  
+[2019-12-12 17:17:36.5585][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 17:17:36.7747][Info] Console : [Send] admin - ReqUserLogin2  
+[2019-12-12 17:17:42.6758][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 17:17:42.8912][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 17:19:47.0831][Info] Console : [Server] SessionClosed!  
+[2019-12-12 17:48:39.0560][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 17:48:44.2447][Info] Console : [Server] SessionClosed!  
+[2019-12-12 17:49:01.2914][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 17:49:03.5416][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 17:49:04.5802][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 17:49:04.8013][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 17:49:14.7992][Info] Console : [Recv] UserLogin - admin2  
+[2019-12-12 17:49:15.0208][Info] Console : [Send] admin2 - ReqUserLogin2  
+[2019-12-12 17:49:19.5067][Info] Console : [Recv] UserLogin - admin2  
+[2019-12-12 17:49:19.7215][Info] Console : [Send] admin2 - ReqUserLogin0  
+[2019-12-12 17:50:04.2647][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 17:50:12.8070][Info] Console : [Recv] UserRegister - user1  
+[2019-12-12 17:50:13.0312][Info] Console : [Send] user1 - ReqUserRegister0  
+[2019-12-12 17:50:22.3795][Info] Console : [Recv] UserLogin - user1  
+[2019-12-12 17:50:22.5999][Info] Console : [Send] user1 - ReqUserLogin0  
+[2019-12-12 17:50:44.0000][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 17:50:50.1277][Info] Console : [Recv] UserRegister - user2  
+[2019-12-12 17:50:50.3540][Info] Console : [Send] user2 - ReqUserRegister0  
+[2019-12-12 17:50:51.5966][Info] Console : [Recv] UserLogin - user2  
+[2019-12-12 17:50:51.8133][Info] Console : [Send] user2 - ReqUserLogin0  
+[2019-12-12 17:51:22.3028][Info] Console : [Server] SessionClosed!  
+[2019-12-12 17:51:24.3516][Info] Console : [Server] SessionClosed!  
+[2019-12-12 17:51:24.5659][Info] Console : [Server] SessionClosed!  
+[2019-12-12 17:51:24.7745][Info] Console : [Server] SessionClosed!  
+[2019-12-12 18:04:57.5659][Debug] Listener (0.0.0.0:65535) was started  
+[2019-12-12 18:04:57.6241][Info] The server instance NcsServer`1-20226985 has been started!  
+[2019-12-12 18:04:57.6593][Info] Console : [Console] Console LogSystem SetUp  
+[2019-12-12 18:04:57.8848][Info] Console : [DataBase] Init Database - ./Data/user.db  
+[2019-12-12 18:05:29.0090][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 18:05:29.8488][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 18:05:31.0791][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 18:05:39.3457][Info] Console : [Recv] UserRegister - user1  
+[2019-12-12 18:05:39.5621][Info] Console : [Send] user1 - ReqUserRegister1  
+[2019-12-12 18:05:41.4020][Info] Console : [Recv] UserLogin - user1  
+[2019-12-12 18:05:41.6227][Info] Console : [Send] user1 - ReqUserLogin0  
+[2019-12-12 18:05:41.8347][Info] Console : [Recv] RoomList  
+[2019-12-12 18:05:42.0622][Info] Console : [Send] ResRoomList - 0...  
+[2019-12-12 18:05:48.9858][Info] Console : [Recv] UserLogin - user2  
+[2019-12-12 18:05:49.2166][Info] Console : [Send] user2 - ReqUserLogin0  
+[2019-12-12 18:05:49.4266][Info] Console : [Recv] RoomList  
+[2019-12-12 18:05:49.6402][Info] Console : [Send] ResRoomList - 0...  
+[2019-12-12 18:05:57.2809][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 18:05:57.4980][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 18:05:57.7211][Info] Console : [Recv] RoomList  
+[2019-12-12 18:05:57.9323][Info] Console : [Send] ResRoomList - 0...  
+[2019-12-12 18:06:04.1869][Info] Console : [Recv] RoomCreate - myRoom  
+[2019-12-12 18:06:04.4205][Info] Console : [Send] myRoom - ResRoomCreate0  
+[2019-12-12 18:06:04.6414][Info] Console : [Recv] RoomList  
+[2019-12-12 18:06:04.8575][Info] Console : [Send] ResRoomList - 1...  
+[2019-12-12 18:06:14.6781][Info] Console : [Recv] RoomCreate - 한글도 가능하다 이거야  
+[2019-12-12 18:06:14.8937][Info] Console : [Send] 한글도 가능하다 이거야 - ResRoomCreate0  
+[2019-12-12 18:06:15.1206][Info] Console : [Recv] RoomList  
+[2019-12-12 18:06:15.3336][Info] Console : [Send] ResRoomList - 2...  
+[2019-12-12 18:06:17.1801][Info] Console : [Recv] RoomList  
+[2019-12-12 18:06:17.3952][Info] Console : [Send] ResRoomList - 2...  
+[2019-12-12 18:06:18.0306][Info] Console : [Recv] RoomList  
+[2019-12-12 18:06:18.2495][Info] Console : [Send] ResRoomList - 2...  
+[2019-12-12 18:10:46.3731][Debug] Listener (0.0.0.0:65535) was started  
+[2019-12-12 18:10:46.4227][Info] The server instance NcsServer`1-20226985 has been started!  
+[2019-12-12 18:10:46.4421][Info] Console : [Console] Console LogSystem SetUp  
+[2019-12-12 18:10:46.6577][Info] Console : [DataBase] Init Database - ./Data/user.db  
+[2019-12-12 18:13:34.8744][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 18:13:35.9008][Info] Console : [Server] NewSessionConnected!  
+[2019-12-12 18:13:43.0584][Info] Console : [Recv] UserLogin - admin  
+[2019-12-12 18:13:43.2795][Info] Console : [Send] admin - ReqUserLogin0  
+[2019-12-12 18:13:43.4924][Info] Console : [Recv] RoomList  
+[2019-12-12 18:13:43.7031][Info] Console : [Send] ResRoomList - 0...  
+[2019-12-12 18:13:52.0739][Info] Console : [Recv] UserLogin - admin2  
+[2019-12-12 18:13:52.2859][Info] Console : [Send] admin2 - ReqUserLogin0  
+[2019-12-12 18:13:52.4986][Info] Console : [Recv] RoomList  
+[2019-12-12 18:13:52.7085][Info] Console : [Send] ResRoomList - 0...  
+[2019-12-12 18:14:20.5836][Info] Console : [Recv] RoomCreate - myRoom  
+[2019-12-12 18:14:20.8105][Info] Console : [Send] myRoom - ResRoomCreate0  
+[2019-12-12 18:14:21.0272][Info] Console : [Recv] RoomList  
+[2019-12-12 18:14:21.2410][Info] Console : [Send] ResRoomList - 1...  
+[2019-12-12 18:14:23.2818][Info] Console : [Recv] RoomList  
+[2019-12-12 18:14:23.4906][Info] Console : [Send] ResRoomList - 1...  
+[2019-12-12 18:15:42.2298][Info] Console : [Server] SessionClosed!  
+[2019-12-12 18:32:28.7588][Info] Console : [Server] SessionClosed!  

@@ -23,7 +23,7 @@ namespace NcsChatClient
         {
             ArraySegment<byte> buffers = bufferStream.Buffers[0];
             byte[] array = buffers.ToArray();
-            return BitConverter.ToInt32(array, 0); ;
+            return BitConverter.ToInt32(array, 0) - 6; ;
         }
     }
 }

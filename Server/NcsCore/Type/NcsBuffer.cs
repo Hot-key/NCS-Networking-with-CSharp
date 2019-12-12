@@ -23,7 +23,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 
 
-//----------------------------------------------------------------------------
+//----------------------------------------s------------------------------------
 //  CGDK.CGMemoryClasses
 //
 //  class CGD.buffer

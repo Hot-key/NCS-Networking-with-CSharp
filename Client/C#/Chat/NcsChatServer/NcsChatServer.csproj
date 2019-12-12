@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="LiteDB" Version="4.1.4" />
     <PackageReference Include="NLog" Version="4.6.8" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
   </ItemGroup>
@@ -24,5 +25,7 @@
       <HintPath>..\DLL\SuperSocket.SocketEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <Import Project="..\NcsChatProtocol\NcsChatProtocol.projitems" Label="Shared" />
 
 </Project>
