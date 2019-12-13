@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LG\\source\\repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj": {}
+    "C:\\Users\\LG\\Source\\Repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LG\\source\\repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj": {
+    "C:\\Users\\LG\\Source\\Repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LG\\source\\repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj",
+        "projectUniqueName": "C:\\Users\\LG\\Source\\Repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj",
         "projectName": "NcsChatServer",
-        "projectPath": "C:\\Users\\LG\\source\\repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj",
+        "projectPath": "C:\\Users\\LG\\Source\\Repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\NcsChatServer.csproj",
         "packagesPath": "C:\\Users\\LG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LG\\source\\repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\obj\\",
+        "outputPath": "C:\\Users\\LG\\Source\\Repos\\Hot-key\\NCS-Networking-with-CSharp\\Client\\C#\\Chat\\NcsChatServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LG\\AppData\\Roaming\\NuGet\\NuGet.Config",
